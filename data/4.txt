@@ -1,0 +1,95 @@
+Добрый день, Дорогой друг!
+
+Сегодня мы попробуем подключить библиотеку Bootstrap v.4 и рассмотрим некоторые базовые вещи по работе с ней.
+
+Итак зададим базовую разметку в формате `html`
+
+~~~
+&lt;!doctype html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Подключаем библиотеку Bootstrap v.4&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет первая страничка!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+~~~
+{:html}
+
+Теперь перейдем на официальный сайт библиотеки - [getbootstrap.com](https://getbootstrap.com). Далее в раздел `Get started`
+
+![bootstrap v.4](https://pp.userapi.com/c850036/v850036002/1acfb9/vhEpsUWWGbQ.jpg)
+
+Копируем там строчки подключения `css` и `javascript` файлов и вставляем в разметку нашу следующим образом:
+
+~~~
+&lt;!doctype html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Подключаем библиотеку Bootstrap v.4&lt;/title&gt;
+    
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет первая страничка!&lt;/h1&gt;
+    
+    &lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+~~~
+{:html}
+
+Всё! Да вот именно так просто подключается библиотека `bootstrap v.4` к проекту.
+
+Также в разделе `Starter template` они предлагают полностью стартовую разметку страницы можно скопировать ее (находится она [тут](https://getbootstrap.com/docs/4.3/getting-started/introduction/#starter-template)).
+
+Теперь поговорим немного о принципах вёрстки проектов с использованием этой библиотеки. Во-первых, вся разметка условно делится на компоненты (мы это выяснили в прошлом уроке и даже визуально разбили наш макет). 
+
+Каждый компонент в понятиях `bootstrap` - это своего рода класс (или совокупность классов). Один или несколько классов можно применить к тому или иному элементу веб-страницы и добиться желаемого отображения (а в некоторых случаях и поведения).
+
+Во-вторых, когда мы будем говорить об адаптивности и делать наш макет максимально отзывчивым для различного рода устройств, то мы увидим и убедимся, что тут тоже все строится на базе классов.
+
+Давайте попробуем условно дополнить нашу разметку (см. код разметки выше) заголовком и текстом из пары-тройки параграфов (абзацев).
+
+~~~
+&lt;!doctype html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Подключаем библиотеку Bootstrap v.4&lt;/title&gt;
+    
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class="h1"&gt;Привет первая страничка!&lt;/h1&gt;
+    &lt;p class="text-justify"&gt;Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение систем массового участия. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности играет важную роль в формировании систем массового участия.&lt;/p&gt;
+    &lt;p class="text-justify"&gt;Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет выполнять важные задания по разработке дальнейших направлений развития. Повседневная практика показывает, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Задача организации, в особенности же консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании модели развития.&lt;/p&gt;
+    &lt;p class="text-justify"&gt;Таким образом начало повседневной работы по формированию позиции позволяет оценить значение направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение модели развития. Задача организации, в особенности же консультация с широким активом играет важную роль в формировании направлений прогрессивного развития.&lt;/p&gt;
+    
+    &lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+~~~
+{:html}
+
+Результат можно увидеть здесь - [codepen.io](https://codepen.io/kidys/pen/bPNpMp). Далее мы изучим сетку этой библиотеки и Вы увидите какие преимущества она дает при построении макетов.
+
+Ну, а на этом здесь всё!
+До новых встреч!

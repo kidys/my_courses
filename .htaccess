@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On 
+#RewriteBase /courses/
+RewriteRule (.*) index.php [L]
+</IfModule>
+
